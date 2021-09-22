@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -mavF
+ls -mav --file-type
