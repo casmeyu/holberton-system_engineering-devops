@@ -1,3 +1,2 @@
 #!/bin/bash
-lchown vincent _hello
-chgrp -h staff _hello
+find -exec chown vincent _hello {} + -exec chgrp -h staff _hello
