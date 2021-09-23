@@ -1,0 +1,3 @@
+#!/bin/bash
+find -exec chown vincent {} +
+find -exec chgrp staff {} +
