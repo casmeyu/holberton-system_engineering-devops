@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Does the fizz buzz up to 20
+
+n=1
+
+while [ $n -le 20 ]
+do
+	if [[ 0 -eq "($n%3) + ($n%5)" ]]
+	then
+		echo "FizzBuzz"
+	elif [[ 0 -eq "($n%3)" ]]
+	then
+		echo "Fizz"
+	elif [[ 0 -eq "($n%5)" ]]
+	then
+		echo "Buzz"
+	else
+		echo "$n"
+	fi
+
+	n=$((n + 1))
+done
