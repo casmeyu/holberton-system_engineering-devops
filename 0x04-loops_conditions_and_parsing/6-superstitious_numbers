@@ -8,16 +8,15 @@ do
 	echo "$idx"
 	idx=$((idx+1))
 
-	if [ $idx -eq 5 ]
-	then
-		echo "bad luck from China"
-		continue
-	elif [ $idx -eq 10 ]
-	then
-		echo "bad luck from Japan"
-	elif [ $idx -eq 18 ]
-	then
-		echo "bad luck from Italy"
-	fi
-
+	case $idx in
+		5)
+			echo "bad luck from China"
+		;;
+		10)
+			echo "bad luck from Japan"
+		;;
+		18)
+			echo "bad luck from Italy"
+		;;
+	esac
 done
