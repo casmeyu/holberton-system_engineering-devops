@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+txt="Best School"
+idx=0
+
+while [ $idx -lt 10 ]
+do
+	if [ $idx -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $idx -eq 7 ]
+	then
+		echo "good luck"
+	else
+		echo "$txt"
+	fi
+	idx=$((idx+1))
+done
