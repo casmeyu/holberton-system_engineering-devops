@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#Displays hours from 0 to 12 with their minutes
+
+hours=0
+minutes=1
+
+while [ $hours -le 12 ]
+do
+	echo "Hour: $hours"
+	if [ $hours -lt 12 ]
+	then
+		minutes=1
+		while [ $minutes -lt 60 ]
+		do
+			echo "$minutes"
+			minutes=$((minutes+1))
+		done
+	fi
+	hours=$((hours+1))
+done
