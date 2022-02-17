@@ -3,7 +3,7 @@
 
 n=1
 
-while [ $n -le 20 ]
+while [ $n -le 100 ]
 do
 	if [[ 0 -eq "($n%3) + ($n%5)" ]]
 	then
