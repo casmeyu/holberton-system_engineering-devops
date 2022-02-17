@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Displays the name of the files after the initial '-'
+
+for x in *
+do
+	x=$(echo "$x" | cut -d- -f2)
+	echo "$x"
+done
