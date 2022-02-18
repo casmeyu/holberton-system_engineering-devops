@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays processes of the bash made easy
+
+pgrep -a bash
