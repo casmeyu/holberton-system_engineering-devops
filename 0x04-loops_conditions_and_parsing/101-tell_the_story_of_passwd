@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Tells the story of every user in the system
+
+while read -r line
+do
+	name=$(echo "$line" | cut -d: -f1)
+	grp=$(echo "$line" | cut -d: -f4)
+	home=$(echo "$line" | cut -d: -f6)
+	shell=$(echo "$line" | cut -d: -f7)
+	id=$(echo "$line" | cut -d: -f3)
+	password=$(echo "$line" | cut -d: -f2)
+	info=$(echo "$line" | cut -d: -f5)
+	
+	echo "The user $name is part of the $grp gang, lives in $home and rides $shell. $id place is protected by the passcode $password, more info about the user here: $info"
+done < /etc/passwd
