@@ -11,5 +11,5 @@ do
 	password=$(echo "$line" | cut -d: -f2)
 	info=$(echo "$line" | cut -d: -f5)
 	
-	echo "The user $name is part of the $grp gang, lives in $home and rides $shell. $id place is protected by the passcode $password, more info about the user here: $info"
+	echo "The user $name is part of the $grp gang, lives in $home and rides $shell. $id's place is protected by the passcode $password, more info about the user here: $info"
 done < /etc/passwd
