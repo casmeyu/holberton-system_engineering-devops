@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 #Displays the ips and request status of apache log
 
-
-logs=$(awk '{ print $1, $9 }' apache-access.log | sort | uniq -c | sort -rn)
-
-echo "$logs"
+awk -F' ' '{ print $1, $9 }' apache-access.log | sort | uniq -c | sort -rn
