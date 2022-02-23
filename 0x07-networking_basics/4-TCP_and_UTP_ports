@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show the listening TCP/UDP ports and the programs that are using them
+
+netstat -lp
