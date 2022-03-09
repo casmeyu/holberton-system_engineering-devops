@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show all connected IPs
+
+arp -e
