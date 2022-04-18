@@ -1,0 +1,2 @@
+#0x0A Puppet Master
+Learning about configuration with Puppet Management Tool
