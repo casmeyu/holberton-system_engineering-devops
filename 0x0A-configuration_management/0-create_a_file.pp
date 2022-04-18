@@ -1,3 +1,4 @@
+# Creates the school file in the /tmp direcotry
 file { 'school':
   ensure  => 'file',
   path    => '/tmp/school',
