@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Trying to connect with school private key
 ssh -i ~/.ssh/school ubuntu@35.196.7.186
