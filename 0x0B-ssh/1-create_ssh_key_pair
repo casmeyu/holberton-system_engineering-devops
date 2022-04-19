@@ -1,0 +1,3 @@
+#!/bin/bash
+touch ~/.ssh/skool
+ssh-keygen -b 4096 -f '~/.ssh/skool' -N ''
