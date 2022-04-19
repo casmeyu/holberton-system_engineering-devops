@@ -1,13 +1,16 @@
-file_line { '/etc/ssh/ssh_config':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication	no'
-  match  => '\s*PasswordAuthentication\s*\w*',
+exec { 'echo "PasswordAuthentication no" >> /etc/ssh/ssh_config':
+  command => 'echo "PasswordAuthentication no" >> /etc/ssh/ssh_config',
+  path    => '/usr/local/bin/:/bin/',
 }
 
-file_line { '/etc/ssh/ssh_config':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/school',
-  match  => 'IdentityFile ~/.ssh/id_rsa',
+exec { 'echo "IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config':
+  command => 'echo "IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config',
+  path    => '/usr/local/bin/:/bin/',
 }
+
+# Dont know why sed doesnt change the file
+
+# exec { '/etc/ssh/ssh_config':
+#  command => 'sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config',
+#  path    => '/usr/local/bin/:/bin/',
+# }
