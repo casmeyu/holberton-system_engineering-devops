@@ -9,6 +9,6 @@ sudo sed -i '/^\tserver_name.*/a \\n\terror_page 404 \/custom-404.html;\n\trewri
 
 # Changing html response
 echo "Hello World" | tee /var/www/html/index.nginx-debian.html
-echo "Ceci n'est pas une page\n\n" | tee /var/html/custom-404.html
+echo "Ceci n\'est pas une page\n\n" | tee /var/www/html/custom-404.html
 
 sudo service nginx restart
