@@ -2,4 +2,3 @@
 # Starts the apache2 service and show its status
 
 sudo service start apache2
-sudo service status apache2
