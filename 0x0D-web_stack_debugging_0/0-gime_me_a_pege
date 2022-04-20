@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo service start apache2
+sudo service status apache2
