@@ -2,11 +2,11 @@
 # Installing and starting nginx and configuring redirection
 sudo apt update
 sudo apt install -y nginx
-sudo service nginx restart
 
 #Nginx redirection
-sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me$ https:\/\/www.youtub
-e.com\/watch?v=QH2-TGUlwu4 redirect;/" /etc/nginx/sites-available/default
+sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me/ https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;/" /etc/nginx/sites-available/default
 
 # Changing html response
 echo "Hello World" | tee /var/www/html/index.nginx-debian.html
+
+sudo service nginx restart
