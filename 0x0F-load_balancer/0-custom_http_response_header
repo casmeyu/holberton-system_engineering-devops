@@ -1,0 +1,16 @@
+#!/usr/bin/env bash                                                                                                 
+# Installing and starting nginx and configuring redirection                                                         
+sudo apt update                                                                                                     
+sudo apt install -y nginx                                                                                           
+                                                                                                                    
+#Nginx redirection                                                                                                  
+sudo sed -i '/^\tserver_name.*/a \\n\terror_page 404 \/custom-404.html;\n\tadd_hh                                   
+eader X-Servered-By $HOSTNAME;\n\trewrite ^\/redirect_me/$ https:\/\/www.youtube.cc                                   
+om\/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default                                            
+                                                                                                                    
+                                                                                                                    
+# Changing html response                                                                                            
+echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html                                                 
+printf "Ceci n'est pas une page" | sudo tee /var/www/html/custom-404.html                                           
+                                                                                                                    
+sudo service nginx restart
