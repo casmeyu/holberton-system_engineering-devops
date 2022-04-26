@@ -9,6 +9,6 @@ sudo apt install -y haproxy=2.0\*
 printf "\nENABLED=1\n" | sudo tee -a /etc/default/haproxy
 
 # Configure HAProxy
-printf "\nfrontend http\n\tbind *:80\n\tmode http\n\tdefault_backend web-backend\n\nbackend web-backend\n\tbalance roundrobin\n\t server 3944-web-01 34.75.232.87:80 check\n\tserver 3944-web-02 107.23.155.109:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+printf "\nfrontend http\n\tbind *:80\n\tmode http\n\tdefault_backend web-backend\n\nbackend web-backend\n\tbalance roundrobin\n\t server 3967-web-01 35.196.7.186:80 check\n\tserver 3967-web-02 54.166.73.253:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
