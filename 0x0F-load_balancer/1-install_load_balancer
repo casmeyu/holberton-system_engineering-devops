@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Installs and configure load balance server with HAProxy
 
 #Install HAProxy
