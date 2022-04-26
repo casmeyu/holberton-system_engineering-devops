@@ -2,8 +2,8 @@
 # Installs and configure load balance server with HAProxy
 
 #Install HAProxy
-# sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.0
+sudo apt-get install --no-install-recommends software-properties-common
+printf "\n" | sudo add-apt-repository ppa:vbernat/haproxy-2.0
 sudo apt-get update
 sudo apt-get install haproxy=2.0\*
 sudo  sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
