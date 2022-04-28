@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Sets the default port of http to 80
-echo "changing ipv4"
 sudo sed -i 's/listen 8080 default_server;/listen 80 default_server;/' /etc/nginx/sites-enabled/default
-echo "changing ipv6"
 sudo sed -i 's/listen \[::\]:8080 default_server ipv6only=on;/listen [::]:80 default_server ipv6only=on;/' /etc/nginx/sites-enabled/default
 sudo service nginx restart
