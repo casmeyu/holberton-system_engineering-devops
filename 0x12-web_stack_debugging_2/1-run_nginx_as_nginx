@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Changes nginx config so that its run by the nginx server
+sudo sed -i '1s/^/user nginx\n/' /etc/nginx/nginx.conf
