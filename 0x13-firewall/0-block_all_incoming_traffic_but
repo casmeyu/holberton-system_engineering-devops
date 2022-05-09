@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Installs and sets up a simple ufw firewall
+sudo apt install ufw
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+echo "y" | sudo ufw enable
