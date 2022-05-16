@@ -7,6 +7,7 @@ from sys import argv
 
 
 def get_todos_json(u_id):
+    """"Writes the tasks of an employee into a JSON file"""
     url = 'https://jsonplaceholder.typicode.com/'
     user = json.loads(requests.get('{}users/{}'.format(url, u_id)).text)
     data = requests.get('{}users/{}/todos'.format(url, u_id))

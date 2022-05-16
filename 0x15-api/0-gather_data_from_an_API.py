@@ -6,6 +6,7 @@ from sys import argv
 
 
 def get_todos(u_id):
+    """Prints all the task done by the employee"""
     url = 'https://jsonplaceholder.typicode.com/'
     user = json.loads(requests.get('{}users/{}'.format(url, u_id)).text)
     data = requests.get('{}users/{}/todos'.format(url, u_id))
