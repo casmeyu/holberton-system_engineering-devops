@@ -22,7 +22,7 @@ def get_todos_json(u_id):
             task_dict = {}
             task_dict['task'] = value['title']
             task_dict['completed'] = value['completed']
-            task_dict['username'] = user['name']
+            task_dict['username'] = user['username']
             aux_dict[u_id].append(task_dict)
 
         json.dump(aux_dict, file)
