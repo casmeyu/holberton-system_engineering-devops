@@ -23,7 +23,7 @@ def get_todos_json():
                 task_dict = {}
                 task_dict['task'] = value['title']
                 task_dict['completed'] = value['completed']
-                task_dict['username'] = u['name']
+                task_dict['username'] = u['username']
                 user_dict[u['id']].append(task_dict)
 
             aux_list.append(user_dict)
