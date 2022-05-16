@@ -30,4 +30,4 @@ def get_todos_json(u_id):
 
 if __name__ == '__main__':
     if len(argv) >= 2:
-        get_todos_json(argv[2])
+        get_todos_json(argv[1])
