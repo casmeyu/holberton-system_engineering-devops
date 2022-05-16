@@ -9,7 +9,7 @@ from sys import argv
 def get_todos_csv(u_id):
     """Writes the task of an employee into a CSV file"""
     url = 'https://jsonplaceholder.typicode.com/'
-    if int(u_id) < 0:
+    if int(u_id) < 0 and int(u_id) <= 10:
         return
     user = json.loads(requests.get('{}users/{}'.format(url, u_id)).text)
     data = requests.get('{}users/{}/todos'.format(url, u_id))
