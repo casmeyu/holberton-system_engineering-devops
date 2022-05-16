@@ -9,8 +9,6 @@ from sys import argv
 def get_todos_csv(u_id):
     """Writes the task of an employee into a CSV file"""
     url = 'https://jsonplaceholder.typicode.com/'
-    if int(u_id) < 0 and int(u_id) <= 10:
-        return
     user = json.loads(requests.get('{}users/{}'.format(url, u_id)).text)
     data = requests.get('{}users/{}/todos'.format(url, u_id))
     content = json.loads(data.text)
@@ -19,7 +17,7 @@ def get_todos_csv(u_id):
     with open('{}.csv'.format(u_id), 'wt') as file:
         for value in content:
             value['id'] = u_id
-            value['name'] = user['name']
+            value['name'] = user['username']
         dict_writer = csv.DictWriter(file,
                                      keys,
                                      extrasaction='ignore',
