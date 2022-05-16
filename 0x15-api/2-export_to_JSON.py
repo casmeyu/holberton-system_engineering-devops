@@ -14,7 +14,7 @@ def get_todos_json(u_id):
     content = json.loads(data.text)
 
     keys = ['id', 'name', 'completed', 'title']
-    with open('2.json', 'wt') as file:
+    with open('{}.json'.format(u_id), 'wt') as file:
         dict_list = []
         aux_dict = {}
         aux_dict[u_id] = []
@@ -30,4 +30,4 @@ def get_todos_json(u_id):
 
 if __name__ == '__main__':
     if len(argv) >= 2:
-        get_todos_json(2)
+        get_todos_json(argv[2])

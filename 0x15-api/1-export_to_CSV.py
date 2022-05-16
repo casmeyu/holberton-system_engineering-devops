@@ -14,7 +14,7 @@ def get_todos_csv(u_id):
     content = json.loads(data.text)
 
     keys = ['id', 'name', 'completed', 'title']
-    with open('2.csv', 'wt') as file:
+    with open('{}.csv'.format(u_id), 'wt') as file:
         for value in content:
             value['id'] = u_id
             value['name'] = user['name']
