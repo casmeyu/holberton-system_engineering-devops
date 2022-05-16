@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module for taking information out on a json api"""
 import csv
 import json
