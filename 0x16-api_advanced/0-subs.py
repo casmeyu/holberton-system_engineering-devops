@@ -9,7 +9,9 @@ def number_of_subscribers(subreddit):
     if subreddit is None:
         return (0)
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    response = requests.get(url, headers={'User-agent': 'ojitos v0.1'})
+    response = requests.get(url,
+                            headers={'User-agent': 'ojitos v0.1'},
+                            allow_redirects=False)
     data = json.loads(response.text)
     try:
         data = data['data']['subscribers']
